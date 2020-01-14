@@ -21,6 +21,8 @@ For each entry in the FLOW, do the following:
 	If no match, print "No nat match for " IP:port
 done
 ================================================================================
+With the same set of input lines in the NAT and FLOW, along with some additional error conditions I have tested the outputs.
+
 Improvement opportunities:
 * In the list, the first entries ended up as null elements. Instead of fixing it, due to time constraints I've skipped the entry through an 'if' condition.
 * The search operation can be optimized further to avoid repeated comparison with earlier elements
@@ -29,3 +31,4 @@ Improvement opportunities:
 * Further code optimization and exception handling can be done
 * Assumed the input files to be local. They are not passed through arguments.
 ================================================================================
+I'm interested to be a part of VEN team.
