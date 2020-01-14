@@ -21,6 +21,59 @@ For each entry in the FLOW, do the following:
 done
 ================================================================================
 With the same set of input lines in the NAT and FLOW, along with some additional error conditions I have tested the outputs.
+Sample Inputs
+
+NAT File
+10.0.1.1:8080,192.168.0.1:80
+
+10.0.1.1:8084,192.168.0.2:8080
+
+10.0.1.1:8086,192.168.0.4:80
+
+10.0.1.1:8082,192.168.0.3:80
+
+10.0.1.2:8080,1.1.1.1:1
+
+*:21,1.2.3.4:12
+
+10.11.12.13:*,40.100.20.7:3389
+
+ 
+
+FLOW File 
+10.0.1.1:8080
+
+5.6.7.8:55555
+
+10.0.1.1:8086
+
+9.8.7.6:21
+
+10.1.1.2:8080
+
+34.65.12.9:22
+
+10.0.1.2:8080
+
+ 
+
+Sample Output
+
+10.0.1.1:8080 -> 192.168.0.1:80
+
+No nat match for 5.6.7.8:55555
+
+10.0.1.1:8086 -> 192.168.0.4:80
+
+9.8.7.6:21 -> 1.2.3.4:12
+
+No nat match for 10.1.1.2:8080
+
+No nat match for 34.65.12.9:22
+
+10.0.1.2:8080 -> 1.1.1.1:1
+ 
+ ==============================================================================
 
 Improvement opportunities:
 * In the list, the first entries ended up as null elements. Instead of fixing it, due to time constraints I've skipped the entry through an 'if' condition.
