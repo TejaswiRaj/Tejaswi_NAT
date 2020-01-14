@@ -1,7 +1,7 @@
 # Tejaswi_NAT
 
 Visual Studio 17
-illumio-NAT.cpp is the only file used as part of the visual studio solution
+Tejaswi_NAT.cpp is the only file used as part of the visual studio solution
 The input and output files are placed locally in the same folder.
 ================================================================================
 Overall approach:
